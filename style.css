@@ -41,6 +41,16 @@ section {
   background-color: var(--primary-bg-color);
 }
 
+/* ImageLazyLoad.js*/
+
+[data-lazyloadurls] {
+  filter: blur(100px);
+  transition: filter 1s .3s ease-in-out;
+}
+
+[data-lazyloadurls].is-loaded {
+  filter: blur(0);
+}
 
 /* Varible color for Contrast swither  */
 
