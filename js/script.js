@@ -22,7 +22,7 @@ for (let i = 0; i < archiveButton.length; i++) {
 
     function OpenCloseDescription(a) {
 
-        if (archiveButtonState == 0) {
+        if (archiveButtonState === 0) {
             archiveButtonCross[a].style.transform = "rotate(45deg)";
             archiveDescription[a].style.zIndex = "2";
             archiveDescription[a].style.opacity = "1";
@@ -80,13 +80,12 @@ for (let i = 0; i < issues.length; i++) {
             // issues[i].style.color = "white";
         });
 
-        issuesImage[0].innerHTML = `<img srcset='images/issues/WEBP/${i + 1}.1.webp, images/issues/WEB/${i + 1}.1.jpg' />`;
-        issuesImage[1].innerHTML = `<img srcset='images/issues/WEBP/${i + 1}.2.webp, images/issues/WEB/${i + 1}.2.jpg' />`;
-        issuesImage[2].innerHTML = `<img srcset='images/issues/WEBP/${i + 1}.3.webp, images/issues/WEB/${i + 1}.3.jpg' />`;
+        issuesImage[0].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.1.webp, images/issues/WEB/${i + 1}.1.jpg' />`;
+        issuesImage[1].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.2.webp, images/issues/WEB/${i + 1}.2.jpg' />`;
+        issuesImage[2].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.3.webp, images/issues/WEB/${i + 1}.3.jpg' />`;
     };
 
 }
-;
 
 /////////////////////////////////
 /// Contrast Switch /////////////
@@ -275,7 +274,7 @@ document.addEventListener('scroll', function (ev) {
             // gradDotYPosition = ((window.innerHeight/(section.length+1))*(i+1));
             gradDotYPosition = ((window.innerHeight / (section.length + 3)) * (i + 2));
 
-            if (gradDotYPosition != oldGradDotYPosition) {
+            if (gradDotYPosition !== oldGradDotYPosition) {
                 console.log('Top = ' + i * 50 + 'px');
                 gradDot.style.top = gradDotYPosition + 'px';
             }
@@ -371,6 +370,6 @@ function randomNumber() {
     document.getElementById("z-tracking").innerHTML = zValueRounded;
     document.getElementById("bpm-tracking").innerHTML = bpmValueRounded;
 
-};
+}
 
 setInterval(randomNumber, 1000);
