@@ -279,6 +279,8 @@ document.addEventListener('scroll', function (ev) {
                 gradDot.style.top = gradDotYPosition + 'px';
             }
             oldGradDotYPosition = gradDotYPosition;
+
+            //todo: add lazyload event here
         }
     }
 }, true)
@@ -373,3 +375,27 @@ function randomNumber() {
 }
 
 setInterval(randomNumber, 1000);
+
+
+/////////////////////////////////
+//// Image LazyLoad /////////////
+/////////////////////////////////
+
+const allImageWithLazyLoading = document.querySelectorAll('[data-lazyloadurls]')
+
+for(const htmlElement of allImageWithLazyLoading) {
+    if( htmlElement instanceof HTMLImageElement ) {
+        const imageWithLazyLoad = new ImageLazyLoad({htmlImageElement: htmlElement})
+
+        document.addEventListener('scroll', ()=> {
+            if(
+                htmlElement.getBoundingClientRect().top > -100
+                && htmlElement.getBoundingClientRect().top < window.innerHeight
+            ) imageWithLazyLoad.loadImage({sizeOfImageToLoad: 'reg'})
+
+        }, true)
+    }
+
+    else
+        console.error(htmlElement, ' need to be HTMLImageElement')
+}
