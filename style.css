@@ -2,16 +2,16 @@
 
 @font-face {
 font-family: 'SansSerif';
- src: url(font/medium.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/medium.ttf);
+ font-weight: 500;
  font-style: normal;
  font-display: swap;
 }
 
 @font-face {
 font-family: 'OGG';
- src: url(font/ogg_regular_italic.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/ogg_regular_italic.ttf);
+ font-weight: 400;
  font-style: normal;
  font-display: swap;
 }
@@ -22,8 +22,7 @@ font-family: 'OGG';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'SansSerif';
-  transition: color 1000ms;
+  font-family: 'SansSerif', sans-serif;
   transition: background-color 1000ms;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -44,8 +43,8 @@ section {
 /* ImageLazyLoad.js*/
 
 [data-lazyloadurls] {
-  filter: blur(100px);
-  transition: filter 1s .3s ease-in-out;
+  filter: blur(10px);
+   transition: filter 1s .3s ease-in-out;
 }
 
 [data-lazyloadurls].is-loaded {
@@ -75,7 +74,7 @@ body.active {
     top: 0;
     right: 0;
     margin: 30px 20px 0 0;
-    transition: transform 1s;
+     transition: transform 1s;
     z-index: 1;
   }
 
@@ -87,7 +86,7 @@ body.active {
     text-decoration: none;
     border-radius: 100%;
     border: 1px solid var(--primary-text-color);
-    transition: transform 1s;
+     transition: transform 1s;
   }
 
   #constrast-switch-dot-2 {
@@ -99,15 +98,15 @@ body.active {
     border-radius: 100%;
     border: 1px solid var(--primary-text-color);
     margin-left: -0.75rem;
-    transition: transform 1s;
+     transition: transform 1s;
   }
 
 /* Font type  */
 
 @font-face {
 font-family: 'SansSerif';
- src: url(font/medium.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/medium.ttf);
+ font-weight: 500;
  font-style: normal;
  font-display: swap;
 }
@@ -140,13 +139,13 @@ h1.go-to-next span {
 }
 
 h1.section-name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 1;
-  transition: 0.9s;
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 1;
+    transition: 0.9s;
+}
 
   h1.section-name-dark {
     color: white;
@@ -204,9 +203,8 @@ h1.section-name {
   height: 15px;
   background-color: var(--primary-text-color);
   margin-bottom: 5px;
-  transition: 3s;
+   transition: height 3s;
 }
-
 .cube:hover {
   height: 265px;
 }
@@ -224,14 +222,13 @@ h1.section-name {
     margin: 10px 2px 0 0;
     padding: 15px 0 0 0;
     z-index: 99999;
-    transition: 0.9s;
     }
 
   .cross-button {
   position: absolute;
   width: 30px;
   height: 30px;
-  transition: 0.9s;
+   transition: transform 0.9s;
   }
 
 .cross-button:before, .cross-button:after {
@@ -268,7 +265,7 @@ h1.section-name {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  transition: 0.9s;
+   transition: opacity 0.9s;
   padding-bottom: 100px;
 }
 
@@ -327,7 +324,6 @@ h1.section-name {
 .archiveYscroll {
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
-  -ms-scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: scroll;
   height: 100vh;
@@ -365,7 +361,7 @@ h1.section-name {
   right: 30px;
   bottom: 10px;
   z-index: 2;
-  transition: 0.9s;
+  transition: opacity 0.9s;
   /* width: 100vw; */
 }
 
@@ -416,7 +412,7 @@ h1.section-name {
   border-left: 0;
   border-right: 15px solid red;
   z-index: 100;
-  transition: top 500ms linear;
+   transition: top 500ms linear;
 }
 
 
@@ -431,7 +427,6 @@ h1.section-name {
 .new-slides, .new-slides-issues  {
   display: flex;
   overflow-x: auto;
-  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -454,7 +449,7 @@ h1.section-name {
   background: white;
   transform-origin: center center;
   transform: scale(1);
-  transition: transform 0.1s;
+   transition: transform 0.1s;
   position: relative;
   display: flex;
   justify-content: center;
@@ -506,12 +501,12 @@ object-position: center;
 
 .issues > div {
 background: black;
-transition: 0.9s;
+ transition: background 0.9s;
 }
 
 #navigation-slides-display {
   /* display: none; */
-  transition: 0.9s;
+   transition: opacity 0.9s;
 
 }
 
@@ -527,7 +522,7 @@ h1.section-issue  {
   z-index: 3;
   color: #b17f4a;
   font-size: 13px;
-  transition: 0.9s;
+   transition: 0.9s;
   display: none;
 }
 
@@ -546,9 +541,9 @@ height: 100%;
 align-content: center;
 padding-left: 120px;
 z-index: 2;
-box-shadow: 60px 0px 60px 0px rgb(0 0 0);
--webkit-box-shadow: 60px 0px 60px 0px rgb(0 0 0);
--moz-box-shadow: 60px 0px 60px 0px rgba(0,0,0,1);
+box-shadow: 60px 0 60px 0 rgb(0 0 0);
+-webkit-box-shadow: 60px 0 60px 0 rgb(0 0 0);
+-moz-box-shadow: 60px 0 60px 0 rgba(0,0,0,1);
 }
 
 
@@ -567,7 +562,7 @@ box-shadow: 60px 0px 60px 0px rgb(0 0 0);
 
 .active .issue-date {
   opacity: 1;
-  transition: 0.9s;
+   transition: opacity 0.9s;
 }
 
 td.active {
@@ -583,7 +578,7 @@ td.active {
 .active .issue-name-underline {
   /* text-decoration-color:var(--primary-text-color); */
   text-decoration-color: rgba(0, 0, 0, 1);
-  transition: 0.9s;
+   transition: 0.9s;
 }
 
 .issue-information {
@@ -615,7 +610,7 @@ table.table-issue td, table.table-issue th {
     line-height: 35px;
     text-align: left;
     color: DimGray;
-    transition: 1s;
+     transition: 1s;
 }
 
 table.table-issue td:hover {
@@ -651,7 +646,7 @@ table.vitae td, table.vitae th {
     line-height: 35px;
     text-align: left;
     color: var(--primary-text-color);
-    transition: 1s;
+     transition: 1s;
 }
 
 
@@ -663,7 +658,7 @@ padding: 0 35px 20px 0;
 z-index: 3;
 color: var(--primary-text-color);
 font-size: 30px;
-transition: 0.9s;
+ transition: 0.9s;
 }
 
 #z-tracking, #y-tracking, #x-tracking, #bpm-tracking {
@@ -683,7 +678,7 @@ transition: 0.9s;
 
 
 /* Don't need button navigation */
-@supports (scroll-snap-type) {
+@supports (scroll-snap-type: y mandatory) {
   .slider > a {
     display: none;
   }
@@ -761,7 +756,6 @@ padding-right: 40px;
 
 table.vitae {
   height: 100%;
-  width: 100%;
   margin-right: 25px;
   margin-left: 40px;
   padding-top: calc(100vh / 12);
@@ -810,7 +804,7 @@ table.vitae td, table.vitae th {
   background: white;
   transform-origin: center center;
   transform: scale(1);
-  transition: transform 0.1s;
+   transition: transform 0.1s;
   position: relative;
   display: flex;
   justify-content: center;
@@ -852,7 +846,7 @@ table.table-issue td, table.table-issue th {
     line-height: 35px;
     text-align: left;
     color: var(--primary-text-color);
-    transition: 1s;
+     transition: 1s;
 }
 
 .issue-name {
@@ -879,7 +873,7 @@ z-index: 999;
   z-index: 3;
   color: #b17f4a;
   font-size: 13px;
-  transition: 0.9s;
+   transition: 0.9s;
   display: block;
 }
 
