@@ -324,10 +324,6 @@ h1.section-name {
 
 /* Système de navigation  */
 
-.gradution-line {
-mix-blend-mode: difference;
-}
-
 .archiveYscroll {
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
@@ -425,14 +421,10 @@ mix-blend-mode: difference;
 
 
 .navBarYArea {
-       display: flex;
-       position: absolute;
-       right: 30px;
-       width: 10vw;
-       height: 100%;
-       margin: auto;
-       align-items:center;
-       justify-content:center;
+   position: fixed;
+   height: 100%;
+    z-index: 1000;
+    mix-blend-mode: difference;
 }
 
 
