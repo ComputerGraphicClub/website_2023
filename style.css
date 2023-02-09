@@ -2,16 +2,16 @@
 
 @font-face {
 font-family: 'SansSerif';
- src: url(font/medium.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/medium.ttf);
+ font-weight: 500;
  font-style: normal;
  font-display: swap;
 }
 
 @font-face {
 font-family: 'OGG';
- src: url(font/ogg_regular_italic.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/ogg_regular_italic.ttf);
+ font-weight: 400;
  font-style: normal;
  font-display: swap;
 }
@@ -22,8 +22,7 @@ font-family: 'OGG';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'SansSerif';
-  transition: color 1000ms;
+  font-family: 'SansSerif', sans-serif;
   transition: background-color 1000ms;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -117,8 +116,8 @@ body.active {
 
 @font-face {
 font-family: 'SansSerif';
- src: url(font/medium.ttf) format('opentype');
- font-weight: initial;
+ src: url(font/medium.ttf);
+ font-weight: 500;
  font-style: normal;
  font-display: swap;
 }
@@ -338,7 +337,6 @@ h1.section-name {
 .archiveYscroll {
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
-  -ms-scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: scroll;
   height: 100vh;
@@ -446,7 +444,6 @@ h1.section-name {
 .new-slides, .new-slides-issues  {
   display: flex;
   overflow-x: auto;
-  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -561,9 +558,9 @@ height: 100%;
 align-content: center;
 padding-left: 120px;
 z-index: 2;
-box-shadow: 60px 0px 60px 0px rgb(0 0 0);
--webkit-box-shadow: 60px 0px 60px 0px rgb(0 0 0);
--moz-box-shadow: 60px 0px 60px 0px rgba(0,0,0,1);
+box-shadow: 60px 0 60px 0 rgb(0 0 0);
+-webkit-box-shadow: 60px 0 60px 0 rgb(0 0 0);
+-moz-box-shadow: 60px 0 60px 0 rgba(0,0,0,1);
 }
 
 
@@ -698,7 +695,7 @@ transition: 0.9s;
 
 
 /* Don't need button navigation */
-@supports (scroll-snap-type) {
+@supports (scroll-snap-type: y mandatory) {
   .slider > a {
     display: none;
   }
@@ -776,7 +773,6 @@ padding-right: 40px;
 
 table.vitae {
   height: 100%;
-  width: 100%;
   margin-right: 25px;
   margin-left: 40px;
   padding-top: calc(100vh / 12);
@@ -904,4 +900,3 @@ z-index: 999;
 }
 
 }
-
