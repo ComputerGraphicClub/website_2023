@@ -52,6 +52,17 @@ section {
   filter: blur(0);
 }
 
+/* CanvasGradatioin.js*/
+
+canvas.canvas-gradation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  mix-blend-mode: difference;
+  background: black;
+}
+
 /* Varible color for Contrast swither  */
 
 :root {
@@ -323,10 +334,6 @@ h1.section-name {
 }
 
 /* Système de navigation  */
-
-.gradution-line {
-mix-blend-mode: difference;
-}
 
 .archiveYscroll {
   scroll-snap-type: y mandatory;
@@ -897,3 +904,4 @@ z-index: 999;
 }
 
 }
+

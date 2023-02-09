@@ -338,7 +338,7 @@ function createDivs(num) {
 
 }
 
-createDivs(sectionNumber + 1);
+// createDivs(sectionNumber + 1);
 
 
 //////////////////////
@@ -399,3 +399,6 @@ for(const htmlElement of allImageWithLazyLoading) {
     else
         console.error(htmlElement, ' need to be HTMLImageElement')
 }
+
+
+new CanvasGradation()
