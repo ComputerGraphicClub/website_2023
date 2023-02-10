@@ -43,9 +43,12 @@ class ImageLazyLoad {
 
         currentImageData.loadListener = () => {
             currentImageData.isLoaded = true
-            this.#htmlImageElement.src = currentImageData.url
-            currentImageData.isLoaded = true
-            this.#htmlImageElement.classList.add('is-loaded')
+
+            window.setInterval(() => {
+                this.#htmlImageElement.src = currentImageData.url
+                this.#htmlImageElement.classList.add('is-loaded')
+            }, 1000)
+
             console.info(this, 'is loaded')
         }
 

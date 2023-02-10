@@ -388,9 +388,17 @@ for(const htmlElement of allImageWithLazyLoading) {
         const imageWithLazyLoad = new ImageLazyLoad({htmlImageElement: htmlElement})
 
         document.addEventListener('scroll', ()=> {
+
+            console.log(
+                'htmlElement.getBoundingClientRect().top: ',
+                htmlElement.getBoundingClientRect().top,
+                '\nwindow.innerHeight: ',
+                window.innerHeight,
+            )
+
             if(
-                htmlElement.getBoundingClientRect().top > -100
-                && htmlElement.getBoundingClientRect().top < window.innerHeight
+                htmlElement.getBoundingClientRect().top > 0
+                && htmlElement.getBoundingClientRect().top < window.innerHeight / 2
             ) imageWithLazyLoad.loadImage({sizeOfImageToLoad: 'reg'})
 
         }, true)
