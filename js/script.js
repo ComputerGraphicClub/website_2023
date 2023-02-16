@@ -80,9 +80,9 @@ for (let i = 0; i < issues.length; i++) {
             // issues[i].style.color = "white";
         });
 
-        issuesImage[0].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.1.webp, images/issues/WEB/${i + 1}.1.jpg' />`;
-        issuesImage[1].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.2.webp, images/issues/WEB/${i + 1}.2.jpg' />`;
-        issuesImage[2].innerHTML = `<img alt="image issues cover" srcset='images/issues/WEBP/${i + 1}.3.webp, images/issues/WEB/${i + 1}.3.jpg' />`;
+        issuesImage[0].innerHTML = `<img data-lazyloadurls="images/@0.5x/issue_${i + 1}.1.jpg,images/@0.8x/issue_${i + 1}.1.jpg,images/@1x/issue_${i + 1}.1.jpg" src="images/@0.5x/issue_${i + 1}.1.jpg">`;
+        issuesImage[1].innerHTML = `<img data-lazyloadurls="images/@0.5x/issue_${i + 1}.2.jpg,images/@0.8x/issue_${i + 1}.2.jpg,images/@1x/issue_${i + 1}.2.jpg" src="images/@0.5x/issue_${i + 1}.2.jpg">`;
+        issuesImage[2].innerHTML = `<img data-lazyloadurls="images/@0.5x/issue_${i + 1}.3.jpg,images/@0.8x/issue_${i + 1}.3.jpg,images/@1x/issue_${i + 1}.3.jpg" src="images/@0.5x/issue_${i + 1}.3.jpg">`;
     };
 
 }
