@@ -678,6 +678,16 @@ font-size: 30px;
 }
 
 /*///////////*/
+/* Info */
+/*///////////*/
+
+.social-link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+
+/*///////////*/
 /* landscape */
 /*///////////*/
  #landscape-msg {
@@ -769,6 +779,8 @@ table.vitae td, table.vitae th {
 }
 
 /*Issues*/
+
+
 
 .issues {
   height: 100%;
