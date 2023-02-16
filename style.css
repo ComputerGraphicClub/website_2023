@@ -400,7 +400,7 @@ h1.section-name {
   border: 7px solid transparent;
   border-left: 0;
   border-right: 15px solid red;
-  z-index: 100;
+  z-index: 1002;
    transition: top 500ms linear;
 }
 
