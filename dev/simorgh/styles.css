@@ -725,3 +725,21 @@ justify-content: flex-end;
     }
 
 }
+
+
+
+/* mobile landscape orientation */
+
+#landscape-msg {
+    display: none;
+    font-size: 3.1vw;
+    color: black;
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }

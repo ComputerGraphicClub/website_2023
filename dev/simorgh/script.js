@@ -75,4 +75,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   
-  
+/////////////////////////////////////////////////////
+/// Disable view on landscape mobile orientation ////
+/////////////////////////////////////////////////////
+
+
+let portrait = window.matchMedia("(orientation: portrait)");
+
+portrait.addEventListener("change", function (e) {
+
+ 
+    const displayOnLandscape = document.querySelectorAll('#landscape-msg');
+
+    if (e.matches) {
+        console.log("portrait");
+        displayOnLandscape[0].style.display = "none";
+
+
+    } else {
+        console.log("landscape");
+        displayOnLandscape[0].style.display = "flex";
+    }
+})
